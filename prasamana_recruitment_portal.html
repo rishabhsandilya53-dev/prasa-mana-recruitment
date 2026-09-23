@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRASAMANA — Team Recruitment</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+*{box-sizing:border-box}body{margin:0;background:#070910;color:#f5f7fb;font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 15% 15%,#12344b 0,transparent 30%),radial-gradient(circle at 85% 20%,#322052 0,transparent 30%),#070910}
+body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.35;background-image:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:50px 50px;mask-image:linear-gradient(#000,transparent 75%)}
+nav{position:sticky;top:0;z-index:10;padding:16px 6vw;background:#070910c9;backdrop-filter:blur(18px);border-bottom:1px solid #fff1;display:flex;justify-content:space-between;align-items:center}.logo{font:700 20px "Space Grotesk";letter-spacing:2px}.logo i{color:#65e7ff;font-style:normal}nav a{color:#b7c1d2;text-decoration:none;font-size:12px;margin-left:22px}
+.wrap{max-width:1160px;margin:auto;padding:0 24px}.hero{min-height:78vh;display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center;padding:80px 0}.pill{display:inline-block;padding:8px 12px;border:1px solid #65e7ff44;border-radius:999px;color:#9eeeff;background:#65e7ff0b;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+h1{font:700 clamp(58px,8vw,100px)/.9 "Space Grotesk";letter-spacing:-5px;margin:23px 0}.grad{background:linear-gradient(100deg,#fff,#65e7ff,#ae8cff);color:transparent;background-clip:text;-webkit-background-clip:text}.hero p{max-width:650px;color:#9ca8b9;line-height:1.75;font-size:17px}.buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}.btn{display:inline-block;border:1px solid #fff2;background:#fff0b;color:#fff;padding:13px 18px;border-radius:12px;text-decoration:none;font-weight:700;font-size:13px;cursor:pointer}.primary{border:0;background:linear-gradient(100deg,#65e7ff,#9c7bff);color:#061018}
+.visual{height:420px;border:1px solid #fff2;border-radius:32px;background:#ffffff05;position:relative;overflow:hidden;box-shadow:0 30px 100px #0008}.ring{position:absolute;inset:20%;border:1px solid #65e7ff55;border-radius:50%;animation:spin 18s linear infinite}.ring:before,.ring:after{content:"";position:absolute;border:1px solid #9c7bff44;border-radius:50%}.ring:before{inset:15%}.ring:after{inset:30%}@keyframes spin{to{transform:rotate(360deg)}}.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:145px;height:145px;border-radius:50%;display:grid;place-items:center;background:#091321;border:1px solid #65e7ff99;box-shadow:0 0 80px #65e7ff30}.core b{font:700 27px "Space Grotesk";letter-spacing:2px}.node{position:absolute;padding:9px 12px;border:1px solid #fff2;border-radius:10px;background:#0d1422e8;font-size:10px;color:#dce7f4}.a{top:12%;left:9%}.b{top:18%;right:8%}.c{bottom:17%;left:8%}.d{bottom:10%;right:12%}
+section{padding:80px 0}.eyebrow{font-size:11px;font-weight:800;color:#65e7ff;letter-spacing:2px;text-transform:uppercase}.head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}.head h2{font:700 42px "Space Grotesk";margin:8px 0;letter-spacing:-2px}.head p{color:#929daf;max-width:440px;line-height:1.6;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{padding:25px;border-radius:20px;border:1px solid #fff2;background:linear-gradient(145deg,#111826,#0a0f18);transition:.25s}.card:hover{transform:translateY(-6px);border-color:#65e7ff55;box-shadow:0 20px 55px #0006}.ico{font-size:28px;margin-bottom:25px}.card h3{font:700 20px "Space Grotesk";margin:0 0 8px}.card p{color:#919dae;line-height:1.65;font-size:13px}.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}.tag{font-size:10px;color:#cbd5e1;border:1px solid #fff2;padding:6px 8px;border-radius:7px;background:#fff1}
+.reqs{display:grid;grid-template-columns:1fr 1fr;gap:14px}.req{padding:21px;border:1px solid #fff2;border-radius:17px;background:#fff1}.req strong{display:block;margin-bottom:7px}.req span{color:#919dae;font-size:13px;line-height:1.6}
+.apply{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}.panel{padding:28px;border:1px solid #fff2;border-radius:22px;background:linear-gradient(145deg,#111826,#0a0f18)}.panel h3{font:700 27px "Space Grotesk";margin-top:0}.list{padding:0;list-style:none}.list li{padding:12px 0;border-bottom:1px solid #fff1;color:#c6cedb;font-size:13px}.list li:before{content:"✓";color:#73efb0;margin-right:9px;font-weight:800}
+form{display:grid;gap:13px}label{font-size:11px;color:#aab5c6;font-weight:700}input,select,textarea{display:block;width:100%;margin-top:7px;background:#070b12;color:#fff;border:1px solid #fff2;border-radius:10px;padding:13px;font:inherit;outline:0}textarea{min-height:90px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:#65e7ff77;box-shadow:0 0 0 3px #65e7ff10}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.success{display:none;margin-top:8px;padding:13px;border:1px solid #73efb044;background:#73efb011;border-radius:10px;color:#b8ffd8;font-size:12px}
+footer{padding:35px 0 60px;border-top:1px solid #fff1;color:#667085;font-size:11px;display:flex;justify-content:space-between}
+@media(max-width:800px){.hero,.apply{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.reqs{grid-template-columns:1fr}.head{display:block}.visual{height:330px}nav a{display:none}h1{letter-spacing:-3px}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="logo">PRASAMANA <i>///</i></div><div><a href="#roles">ROLES</a><a href="#team">TEAM</a><a href="#apply">APPLY</a></div></nav>
+<main class="wrap">
+<section class="hero">
+<div><span class="pill">V-NEST · Team Recruitment</span><h1>Build<br><span class="grad">Prasamana.</span></h1><p>We're looking for people who want to turn a strong idea into a working prototype. Bring your strongest technical skill, your curiosity, and your willingness to build.</p><div class="buttons"><a class="btn primary" href="#apply">Join the team →</a><a class="btn" href="#roles">Explore roles</a></div></div>
+<div class="visual"><div class="ring"></div><div class="core"><b>PRASAMANA</b></div><span class="node a">SOFTWARE</span><span class="node b">AI / CV</span><span class="node c">HARDWARE</span><span class="node d">SYSTEMS</span></div>
+</section>
+
+<section id="roles"><div class="head"><div><div class="eyebrow">01 / Open roles</div><h2>Where do you fit?</h2></div><p>We want complementary strengths. Pick the area where you can contribute most and tell us what you already know.</p></div>
+<div class="grid">
+<article class="card"><div class="ico">⌘</div><h3>Embedded / Software</h3><p>Build the software layer and connect the system to physical hardware.</p><div class="tags"><span class="tag">Python</span><span class="tag">C++</span><span class="tag">Jetson Nano</span><span class="tag">Raspberry Pi</span></div></article>
+<article class="card"><div class="ico">◈</div><h3>AI / Computer Vision</h3><p>Work on perception, image processing and edge-deployed intelligence.</p><div class="tags"><span class="tag">OpenCV</span><span class="tag">ML</span><span class="tag">Detection</span><span class="tag">Edge AI</span></div></article>
+<article class="card"><div class="ico">⌁</div><h3>Hardware / Electronics</h3><p>Integrate sensors, actuators, power and prototype electronics into the system.</p><div class="tags"><span class="tag">Sensors</span><span class="tag">GPIO</span><span class="tag">Circuits</span><span class="tag">Prototyping</span></div></article>
+</div></section>
+
+<section id="team"><div class="head"><div><div class="eyebrow">02 / Team structure</div><h2>Build a balanced team.</h2></div><p>Recruitment should reflect the stated V-NEST team requirements and the technical needs of Prasamana.</p></div>
+<div class="reqs"><div class="req"><strong>⚖️ Balanced team</strong><span>We are looking for complementary technical strengths rather than duplicate roles.</span></div><div class="req"><strong>♀ Female candidate preferred</strong><span>We welcome a female teammate to support balanced team composition.</span></div><div class="req"><strong>🎓 Faculty mentor</strong><span>A faculty mentor is required as part of the V-NEST team structure.</span></div><div class="req"><strong>🔥 Builder mindset</strong><span>Prototype, test, document and iterate. Prior project experience is useful but not mandatory.</span></div></div>
+</section>
+
+<section id="apply"><div class="head"><div><div class="eyebrow">03 / Application</div><h2>Enter the team.</h2></div><p>Applications are collected through the connected form. Keep your answers concise and genuine.</p></div>
+<div class="apply"><div class="panel"><h3>Before you apply</h3><ul class="list"><li>Choose your strongest technical area.</li><li>Mention specific tools you have used.</li><li>Tell us what you want to learn.</li><li>Be ready for a short technical discussion.</li></ul></div>
+<div class="panel"><form id="applicationForm"><div class="row"><label>Name<input required placeholder="Your name"></label><label>Contact<input required placeholder="Email / phone"></label></div><label>Preferred role<select required><option value="">Select</option><option>Embedded / Software — Python / C++</option><option>AI / Computer Vision</option><option>Hardware / Electronics</option><option>Other / Cross-functional</option></select></label><label>Skills<textarea required placeholder="Python, C++, OpenCV, Raspberry Pi, Arduino, PCB design, etc."></textarea></label><label>Why Prasamana?<textarea placeholder="Tell us in 1–3 lines."></textarea></label><button class="btn primary" type="submit">Submit application ↗</button><div class="success" id="success">Demo submission received. Connect this form to your Google Form before publishing.</div></form></div></div></section>
+</main>
+<footer class="wrap"><span>PRASAMANA · Recruitment Portal</span><span>V-NEST 2026</span></footer>
+<script>
+document.getElementById('applicationForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('success').style.display='block';this.querySelector('button').textContent='Application received ✓';});
+document.querySelectorAll('.card').forEach(c=>{c.addEventListener('mousemove',e=>{let r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`translateY(-6px) rotateX(${y*-3}deg) rotateY(${x*3}deg)`});c.addEventListener('mouseleave',()=>c.style.transform='')});
+</script>
+</body>
+</html>
